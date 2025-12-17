@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Danh sách bài tập</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loading">
+        <div class="loader-box">
+            <div class="spinner"></div>
+            <p>Đang tải dữ liệu...</p>
+            <div class="progress"><span></span></div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <header class="header">
+            <div class="title">Danh sách bài tập — Buổi &amp; Bài</div>
+            <div class="filters">
+                <input type="radio" id="all" name="session" value="all" checked>
+                <label class="filter-label" for="all">Tất cả</label>
+
+                <input type="radio" id="b1" name="session" value="b1">
+                <label class="filter-label" for="b1">Buổi 4</label>
+
+                <input type="radio" id="b2" name="session" value="b2">
+                <label class="filter-label" for="b2">Buổi 17</label>
+
+            </div>
+        </header>
+
+        <main>
+            <section class="grid">
+                <!-- Buổi 1 -->
+                <article class="card" data-session="b1">
+                    <h3>Buổi 4</h3>
+                    <p>Mô tả ngắn: Basic CSS</p>
+                    <div class="actions">
+                        <a class="btn" href="b4/index.html" target="_blank">Mở</a>
+                        <a class="link" href="b4/index.html" target="_blank">Xem chi tiết</a>
+                    </div>
+                </article>
+
+                <article class="card" data-session="b2">
+                    <h3>Buổi 17</h3>
+                    <p>Mô tả: Basic JS</p>
+                    <div class="actions">
+                        <a class="btn" href="b17/index.html" target="_blank">Mở</a>
+                        <a class="link" href="b17/index.html" target="_blank">Xem chi tiết</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer style="margin-top:18px;color:#6b7280;font-size:13px">Ghi chú: Toibingu</footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

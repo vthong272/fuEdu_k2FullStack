@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bài tập JavaScript - HTML scaffold</title>
+    <style>
+        body {
+            font-family: Segoe UI, Roboto, Arial;
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 16px;
+            color: #111
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 8px
+        }
+
+        section {
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 6px
+        }
+
+        label {
+            display: inline-block;
+            width: 160px
+        }
+
+        input[type=number] {
+            width: 160px;
+            padding: 6px
+        }
+
+        .row {
+            margin: 6px 0
+        }
+
+        button {
+            padding: 6px 10px;
+            margin-left: 4px
+        }
+
+        .out {
+            margin-top: 8px;
+            padding: 8px;
+            background: #fbfbfb;
+            border: 1px dashed #ccc
+        }
+
+        small.note {
+            display: block;
+            color: #555;
+            margin-top: 6px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bài tập JavaScript cơ bản</h1>
+    <!-- ===== BÀI 1 ===== -->
+    <section id="ex1">
+        <h2>Bài 1: Hoán vị 2 số</h2>
+
+        <form id="ex1_form">
+            <div class="row">
+                <label>Số a:</label>
+                <input id="ex1_a" type="number" step="any" required>
+            </div>
+
+            <div class="row">
+                <label>Số b:</label>
+                <input id="ex1_b" type="number" step="any" required>
+            </div>
+
+            <div class="row">
+                <button type="submit">Hoán vị</button>
+            </div>
+        </form>
+
+        <div id="ex1_out" class="out"></div>
+    </section>
+
+
+    <!-- ===== BÀI 2 ===== -->
+    <section id="ex2">
+        <h2>Bài 2: Tìm số lớn nhất</h2>
+        <form id="ex2_form">
+            <div class="row"><label>a:</label><input id="ex2_a" type="number" required></div>
+            <div class="row"><label>b:</label><input id="ex2_b" type="number" required></div>
+            <div class="row"><label>c:</label><input id="ex2_c" type="number" required></div>
+            <div class="row"><button type="submit">Tìm lớn nhất</button></div>
+        </form>
+        <div id="ex2_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 3 ===== -->
+    <section id="ex3">
+        <h2>Bài 3: Kiểm tra số cùng dấu</h2>
+        <form id="ex3_form">
+            <div class="row"><label>a:</label><input id="ex3_a" type="number" required></div>
+            <div class="row"><label>b:</label><input id="ex3_b" type="number" required></div>
+            <div class="row"><button type="submit">Kiểm tra</button></div>
+        </form>
+        <div id="ex3_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 4 ===== -->
+    <section id="ex4">
+        <h2>Bài 4: Sắp xếp 3 số (tăng dần)</h2>
+        <form id="ex4_form">
+            <div class="row"><label>a:</label><input id="ex4_a" type="number" required></div>
+            <div class="row"><label>b:</label><input id="ex4_b" type="number" required></div>
+            <div class="row"><label>c:</label><input id="ex4_c" type="number" required></div>
+            <div class="row"><button type="submit">Sắp xếp</button></div>
+        </form>
+        <div id="ex4_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 5 ===== -->
+    <section id="ex5">
+        <h2>Bài 5: Tính tiền taxi</h2>
+        <form id="ex5_form">
+            <div class="row"><label>Số km:</label><input id="ex5_km" type="number" step="any" min="0" required></div>
+            <div class="row"><button type="submit">Tính tiền</button></div>
+        </form>
+        <small class="note">≤1km: 15000đ, 1–5km: 13500đ, &gt;5km: 11000đ, &gt;120km giảm 10%</small>
+        <div id="ex5_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 6 ===== -->
+    <section id="ex6">
+        <h2>Bài 6: Tính tiền điện</h2>
+        <form id="ex6_form">
+            <div class="row"><label>Số kWh:</label><input id="ex6_kwh" type="number" min="0" step="1" required></div>
+            <div class="row"><button type="submit">Tính tiền</button></div>
+        </form>
+        <small class="note">
+            Bậc 1 (0–50):1678 | Bậc 2 (51–100):1734 | Bậc 3 (101–200):2014 |
+            Bậc 4 (201–300):2536 | Bậc 5 (301–400):2834 | Bậc 6 (&gt;400):2927
+        </small>
+        <div id="ex6_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 7 ===== -->
+    <section id="ex7">
+        <h2>Bài 7: Tính S = 1*2 + 2*3 + ... + n*(n+1)</h2>
+        <form id="ex7_form">
+            <div class="row"><label>n:</label><input id="ex7_n" type="number" min="0" step="1" required></div>
+            <div class="row"><button type="submit">Tính S</button></div>
+        </form>
+        <div id="ex7_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 8 ===== -->
+    <section id="ex8">
+        <h2>Bài 8: Kiểm tra số nguyên tố</h2>
+        <form id="ex8_form">
+            <div class="row"><label>x:</label><input id="ex8_x" type="number" step="1" required></div>
+            <div class="row"><button type="submit">Kiểm tra</button></div>
+        </form>
+        <small class="note">Viết hàm kiểm tra trong JS (true/false)</small>
+        <div id="ex8_out" class="out"></div>
+    </section>
+
+    <!-- ===== BÀI 9 ===== -->
+    <section id="ex9">
+        <h2>Bài 9: Bảng cửu chương (1 → 10)</h2>
+        <button id="ex9_btn" type="button">Hiện bảng cửu chương</button>
+        <div id="ex9_out" class="out"></div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
