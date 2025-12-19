@@ -33,3 +33,36 @@ window.addEventListener('load', () => {
     }, 80);
 });
 
+const music = document.getElementById("xmasMusic");
+
+mainTl.eventCallback("onStart", () => {
+  music.volume = 0.4;
+  music.loop = true;
+  music.play().catch(() => {
+    // phòng trường hợp browser chặn autoplay
+    console.log("Autoplay bị chặn, cần user interaction");
+  });
+});
+
+
+const startMusicOnce = () => {
+  music.play().catch(() => {});
+  document.removeEventListener("click", startMusicOnce);
+};
+
+document.addEventListener("click", startMusicOnce);
+
+
+const btn = document.getElementById("toggleMusic");
+
+btn.onclick = () => {
+  if (music.paused) {
+    music.play();
+    btn.textContent = "🔊";
+  } else {
+    music.pause();
+    btn.textContent = "🔇";
+  }
+};
+
+

@@ -1,0 +1,27 @@
+.tree-stage {
+  all: initial;               /* CẮT 100% CSS BODY/HTML */
+  position: fixed;
+  inset: 0;
+  background-color: #151522;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* bật lại những thứ cần thiết */
+.tree-stage * {
+  box-sizing: border-box;
+}
+
+.tree-stage svg {
+  width: 90%;
+  height: 90%;
+  visibility: hidden;
+}
+
+/* GSAP classes */
+.tree-stage .sparkle,
+.tree-stage .particle {
+  pointer-events: none;
+}
