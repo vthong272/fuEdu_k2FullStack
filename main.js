@@ -34,28 +34,20 @@ window.addEventListener('load', () => {
 });
 
 const music = document.getElementById("xmasMusic");
-
-mainTl.eventCallback("onStart", () => {
-  music.volume = 0.4;
-  music.loop = true;
-  music.play().catch(() => {
-    // phòng trường hợp browser chặn autoplay
-    console.log("Autoplay bị chặn, cần user interaction");
-  });
-});
-
-
-const startMusicOnce = () => {
-  music.play().catch(() => {});
-  document.removeEventListener("click", startMusicOnce);
-};
-
-document.addEventListener("click", startMusicOnce);
-
-
 const btn = document.getElementById("toggleMusic");
 
-btn.onclick = () => {
+function startMusic() {
+  music.volume = 0.4;
+  music.loop = true;
+  music.play().catch(() => {});
+  window.removeEventListener("pointerdown", startMusic);
+}
+
+window.addEventListener("pointerdown", startMusic);
+
+// nút bật tắt
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
   if (music.paused) {
     music.play();
     btn.textContent = "🔊";
@@ -63,6 +55,4 @@ btn.onclick = () => {
     music.pause();
     btn.textContent = "🔇";
   }
-};
-
-
+});
