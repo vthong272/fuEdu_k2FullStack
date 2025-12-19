@@ -17,21 +17,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-window.addEventListener('load', () => {
-    const loading = document.getElementById('loading');
-    const bar = document.querySelector('.progress span');
+// window.addEventListener('load', () => {
+//     const loading = document.getElementById('loading');
+//     const bar = document.querySelector('.progress span');
 
-    let percent = 0;
-    const timer = setInterval(() => {
-        percent += 5;
-        bar.style.width = percent + '%';
+//     let percent = 0;
+//     const timer = setInterval(() => {
+//         percent += 5;
+//         bar.style.width = percent + '%';
 
-        if (percent >= 100) {
-            clearInterval(timer);
-            setTimeout(() => loading.classList.add('hide'), 200);
-        }
-    }, 80);
-});
+//         if (percent >= 100) {
+//             clearInterval(timer);
+//             setTimeout(() => loading.classList.add('hide'), 200);
+//         }
+//     }, 80);
+// });
 
 const music = document.getElementById("xmasMusic");
 const btn = document.getElementById("toggleMusic");
